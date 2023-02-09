@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!-- Design by foolishdeveloper.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>N-sA-rt</title>
+  <style media="screen">
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body{
+  background:linear-gradient(to right,#2c5364,#0f2027);
+  height:100vh; 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden ;
+ }
+ .slider{
+  position: relative;
+  width:200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation:rotate 30s linear infinite ;
+ }
+ @keyframes rotate{
+   0%{
+    transform:perspective(1000px) rotateY(0deg);
+
+   }
+   100%{
+    transform:perspective(1000px) rotateY(360deg);
+   }
+  
+ }
+ .slider span{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+ }
+ .slider span img{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 2s;
+ }
+.slider span:hover img{
+
+transform: translateY(-50px) scale(0.9);
+transition-duration: 2s; 
+animation-delay: 30s;
+
+}
+h4{
+float : right;
+color: transparent; 
+font-size: 3vw;
+display: flex;
+font-family: 'bad script',cursive;
+
+}
+h4 span{
+animation:animate 3s linear infinite;
+animation-delay: calc(1min * var(--1));
+}
+@keyframes animate{
+    0%{
+        color:#fff;
+        filter: blur(2px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px  #00b3ff,
+        0 0 40px  #00b3ff,
+        0 0 80px  #00b3ff,
+        0 0 120px  #00b3ff,
+        0 0 200px  #00b3ff,
+        0 0 300px  #00b3ff,
+        0 0 400px  #00b3ff;
+    }
+    30%,70%{
+        color:#fff;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px  #00b3ff,
+        0 0 40px  #00b3ff,
+        0 0 80px  #00b3ff,
+        0 0 120px  #00b3ff,
+        0 0 200px  #00b3ff,
+    }
+    100%{
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(0deg);
+    }
+}
+
+p1{
+    font-family:cursive;
+    font-style: italic;
+    font-size:large;
+    color:#fff;
+    text-shadow: 0 0 10px #00b3ff;
+    float : right;
+}
+  </style>
+</head>
+<body>
+ 
+<div class="slider" >
+  
+  <span style="--i:1;"><img src="port-3.jpg" class="img-responsive"></span>
+  
+ <span style="--i:2;"><img src="art-2.jpg"
+   class="img-responsive"></span>
+
+  <span style="--i:3;"><img src="pic-2.jpg" class="img-responsive"></span>
+
+  <span style="--i:4;"><img src="art-3.jpg" class="img-responsive"></span>
+
+  <span style="--i:5;"><img src="pic-3.jpg"
+  class="img-responsive"></span>
+
+  <span style="--i:6;"><img src="art-4.jpg" class="img-responsive"></span>
+
+  <span style="--i:7;"><img src="pic4.jpg" class="img-responsive"></span>
+
+  <span style="--i:8;"><img src="pic-5.jpg" class="img-responsive"></span>
+
+  </div>
+</body>
+<footer>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <br><br><br><br><br><br><br><br><br><br>
+  <h4>
+  <span style="--i:1">N</span>
+  <span style="--i:2">-</span>
+  <span style="--i:3">s</span>
+  <span style="--i:4">A</span>
+  <span style="--i:5">-</span>
+  <span style="--i:6">r</span>
+  <span style="--i:7">t</span>
+  </h4><br><br>
+  <br><p1>your satisfaction is our priority</p1>
+</footer>
+</html>
