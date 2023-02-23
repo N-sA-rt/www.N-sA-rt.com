@@ -367,7 +367,7 @@ p1{
 
 /* footer */
 #footer{
-    background-color: var(--dark-color);
+    background-color: black;
     color: var(--light-color);
 }
 .footer-content{
