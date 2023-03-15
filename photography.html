@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>N-sA-rt</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+  <style media="screen">
+  *{
+padding:0;
+margin:0;
+}
+body{
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('images/photography-background.jpg') center/cover no-repeat fixed;
+}
+#slider{
+margin:50px auto;
+width:600px;
+height:400px;
+padding:5px;
+box-shadow: 0 0 20px rgba(0,0,0,1);
+position:relative;
+}
+.slide{
+list-style:none;
+}
+#slider>li{
+position:absolute;
+top:5px;
+left:5px;
+right:5px;
+bottom:5px;
+}
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class='header'>
+
+    </div>
+    <ul id="slider">
+          <li class="slide"><img src="images/img-2.jpg" width="600px" 
+              height="400px"></li>
+          <li class="slide"><img src="images/img-3.jpg" width="600px" 
+             height="400px"></li>
+          <li class="slide"><img src="images/print-pic.jpg" width="600px" 
+             height="400px"></li>
+    
+          <li class="slide"><img src="images/header-banner.jpg" 
+             width="600px" height="400px"></li>
+
+          <li class="slide"><img src="images/img.jpg" width="600px" 
+             height="400px"></li>
+
+          <li class="slide"><img src="images/img-1.jpg" width="600px" 
+             height="400px"></li>
+
+         <li class="slide"><img title="East London" 
+             src="images/IMG-20221130-WA0003.jpg"
+            width="600px" height="400px"></li>
+
+         <li class="slide"><img title="East London Oxford street"
+             src="images/IMG-20221130-WA0004.jpg" 
+            width="600px" height="400px"></li>
+
+            <li class="slide"><img src="images/photo-1.jpg" 
+               width="600px" height="400px"></li>
+               
+            <li class="slide"><img src="images/photo-2.jpg" width="600px" 
+               height="400px"></li>
+  
+            <li class="slide"><img src="images/photo-3.jpg" width="600px" 
+               height="400px"></li>
+  
+           <li class="slide"><img title="East London" 
+               src="images/photo-4.jpg"
+              width="600px" height="400px"></li>
+  
+           <li class="slide"><img title="East London Oxford street"
+               src="images/IMG-20221130-WA0004.jpg" 
+              width="600px" height="400px"></li>
+    </ul>
+  </div>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#slider>li:gt(0)').hide();
+     setInterval(function() {
+        $('#slider > li:first')
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo('#slider');
+      }, 2000);
+
+   });
+  </script>
+</body>
+</html>
